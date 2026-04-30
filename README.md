@@ -1,16 +1,49 @@
-# React + Vite
+# 🌐 Amit Chandra Das's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive portfolio website showcasing my projects, technical skills, and journey as a web developer.
 
-Currently, two official plugins are available:
+🔗 **Live Site:** https://amitportfolio-five.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📖 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio is built to present my work in a clean and interactive way. It highlights my ability to design and develop user-friendly web applications using modern frontend technologies.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 📱 Fully responsive design (mobile, tablet, desktop)
+- ⚡ Fast performance and optimized UI
+- 🎨 Clean and modern interface
+- 🚀 Smooth animations and transitions
+- 📂 Project showcase with live previews
+- 📬 Contact section for easy communication
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- HTML5
+- CSS3
+- Tailwind CSS
+- JavaScript (ES6+)
+- React.js
+
+### Tools & Deployment
+
+- Git & GitHub
+- Vercel
+
+---
+
+### 📬 Contact
+
+- 📧 Email: acdamit2004@gmail.com
+- 💼 LinkedIn: https://www.linkedin.com/in/amitchandradas2004/
+- 💻 GitHub: https://github.com/amitchandradas2004
+
+---
