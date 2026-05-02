@@ -70,11 +70,11 @@ export default function Navbar({ theme, toggleTheme }) {
         ref={navRef}
         aria-label="Main navigation"
         className={[
-          "fixed top-2 left-1/2 -translate-x-1/2 z-50",
+          "fixed top-2 left-1/2 -translate-x-1/2 z-50 text-center",
           "w-[calc(100%-1.5rem)] sm:w-[calc(100%-2.5rem)] max-w-5xl",
-          "flex items-center justify-between gap-2",
-          "min-h-12 sm:min-h-14",
-          "rounded-3xl p-2 sm:px-3",
+          "flex items-center justify-around gap-5",
+          "min-h-11 sm:min-h-13",
+          "rounded-full px-2 sm:px-3",
           pillBase,
         ].join(" ")}
         style={{
@@ -82,16 +82,13 @@ export default function Navbar({ theme, toggleTheme }) {
           WebkitBackdropFilter: "blur(20px) saturate(160%)",
         }}
       >
-        {/* ── Logo — fluid font size so it never overflows ── */}
         <a
           href="#"
           className={[
-            /* min-w-0 lets flex shrink the logo before it overflows */
-            "min-w-0 shrink px-5 sm:px-3",
+            "min-w-0 shrink w-50 left-5",
             "font-mono font-bold tracking-[1.5px] sm:tracking-[2px] uppercase",
             "no-underline whitespace-nowrap overflow-hidden text-ellipsis",
             "transition-all duration-300",
-            /* clamp: 9 px → 13 px across viewport widths */
             "text-[clamp(9px,2vw,13px)]",
             isDark
               ? "text-cyan-300 [text-shadow:0_0_14px_rgba(0,220,255,0.65)]"
@@ -104,30 +101,30 @@ export default function Navbar({ theme, toggleTheme }) {
         {/* ── Desktop Nav Links (hidden below md) ── */}
         <ul
           className={[
-            "hidden md:flex items-center gap-0.5",
-            "list-none m-0 p-[5px] rounded-full border flex-shrink-0",
+            "hidden md:flex items-center justify-center",
+            "list-none rounded-full border shrink-0 gap-2 h-10",
             "transition-all duration-300",
             isDark
-              ? "bg-white/[0.05] border-white/[0.10]"
-              : "bg-white/[0.25] border-white/[0.40]",
+              ? "bg-white/5 border-white/10"
+              : "bg-white/25 border-white/40",
           ].join(" ")}
         >
           {navLinks.map((link) => (
-            <li key={link.href}>
+            <li key={link.href} className="">
               <a
                 href={link.href}
                 onClick={() => setActiveLink(link.href)}
                 className={[
-                  "block px-4 py-2 rounded-full",
-                  "text-[11px] lg:text-[13px] font-bold tracking-[2px] uppercase",
-                  "no-underline border transition-all duration-200 whitespace-nowrap",
+                  "rounded-full h-8 w-20 flex items-center justify-center",
+                  "text-[12px] lg:text-[13px] font-bold uppercase",
+                  "no-underline border  transition-all duration-200 whitespace-nowrap",
                   activeLink === link.href
                     ? isDark
-                      ? "bg-white/[0.18] text-white border-white/[0.25] shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]"
-                      : "bg-white/[0.55] text-indigo-900 border-white/[0.6]"
+                      ? "bg-white/18 text-white text-center border-white/25 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]"
+                      : "bg-white/[0.55] text-indigo-900 border-white/60"
                     : isDark
-                      ? "text-white/80 border-transparent hover:bg-white/[0.12] hover:text-white hover:border-white/[0.18]"
-                      : "text-indigo-800/80 border-transparent hover:bg-white/[0.45] hover:text-indigo-900",
+                      ? "text-white/80  text-center border-transparent hover:bg-white/12 hover:text-white hover:border-white/18"
+                      : "text-indigo-800/80 border-transparent hover:bg-white/45 hover:text-indigo-900",
                 ].join(" ")}
               >
                 {link.label}
@@ -137,11 +134,10 @@ export default function Navbar({ theme, toggleTheme }) {
         </ul>
 
         {/* ── Right side controls ── */}
-        <div className="flex items-center gap-2 flex-shrink-0 pr-1">
-          {/* Theme Toggle — desktop only */}
+        <div className="flex items-center gap-2 shrink-0 ">
           <button
             onClick={toggleTheme}
-            className={`hidden md:flex ${themeBtn}`}
+            className={`hidden md:flex justify-center h-9 w-22 ${themeBtn}`}
           >
             <span className={dot} />
             {isDark ? "LIGHT" : "DARK"}
@@ -176,7 +172,7 @@ export default function Navbar({ theme, toggleTheme }) {
           </button>
         </div>
       </nav>
-      
+
       <div
         id="mobile-menu"
         ref={dropdownRef}
@@ -188,7 +184,7 @@ export default function Navbar({ theme, toggleTheme }) {
           "rounded-2xl sm:rounded-3xl border px-4 overflow-hidden",
           "transition-all duration-300 ease-in-out p-5",
           menuOpen
-            ? "top-21 sm:top-23 max-h-100 opacity-100 py-4 pointer-events-auto"
+            ? "top-21 sm:top-23 max-h-100 opacity-100 py-5 pointer-events-auto"
             : "top-20 sm:top-22 max-h-0 opacity-0 py-0 pointer-events-none",
           isDark
             ? "bg-[rgba(10,10,30,0.85)] border-white/12 shadow-[0_16px_40px_rgba(0,0,0,0.35)]"
@@ -199,9 +195,9 @@ export default function Navbar({ theme, toggleTheme }) {
           WebkitBackdropFilter: "blur(24px)",
         }}
       >
-        <ul className="m-0 p-0 list-none flex flex-col gap-1.5">
+        <ul className="p-2 list-none flex flex-col items-center justify-center gap-2">
           {navLinks.map((link) => (
-            <li key={link.href}>
+            <li key={link.href} className="h-8 items-center flex">
               <a
                 href={link.href}
                 onClick={() => {
@@ -209,16 +205,16 @@ export default function Navbar({ theme, toggleTheme }) {
                   setMenuOpen(false);
                 }}
                 className={[
-                  "block w-full px-5 py-3 rounded-xl sm:rounded-2xl",
-                  "text-sm font-bold tracking-[2px] uppercase",
+                  "flex w-full rounded-full text-center items-center",
+                  "text-xs font-bold tracking-[2px] uppercase",
                   "no-underline border transition-all duration-200",
                   activeLink === link.href
                     ? isDark
-                      ? "bg-white/[0.12] text-white border-white/[0.18]"
-                      : "bg-white/[0.50] text-indigo-900 border-white/[0.45]"
+                      ? "bg-white/12 text-white border-white/18"
+                      : "bg-white/50 text-indigo-900 border-white/45"
                     : isDark
-                      ? "text-white/85 border-transparent hover:bg-white/[0.10] hover:border-white/[0.18] hover:text-white"
-                      : "text-indigo-900/85 border-transparent hover:bg-white/[0.40] hover:border-white/[0.40] hover:text-indigo-900",
+                      ? "text-white/85 border-transparent hover:bg-white/10 hover:border-white/18 hover:text-white"
+                      : "text-indigo-900/85 border-transparent hover:bg-white/40 hover:border-white/40 hover:text-indigo-900",
                 ].join(" ")}
               >
                 {link.label}
@@ -229,8 +225,8 @@ export default function Navbar({ theme, toggleTheme }) {
           {/* Divider */}
           <li
             className={[
-              "border-t pt-2 mt-1",
-              isDark ? "border-white/[0.08]" : "border-white/[0.40]",
+              "border-t pt-2",
+              isDark ? "border-white/8" : "border-white/40",
             ].join(" ")}
           >
             <button
@@ -239,13 +235,13 @@ export default function Navbar({ theme, toggleTheme }) {
                 setMenuOpen(false);
               }}
               className={[
-                "w-full flex items-center gap-2.5 px-5 py-3 rounded-xl sm:rounded-2xl",
+                "w-full flex items-center gap-2.5  rounded-xl sm:rounded-2xl",
                 "text-sm font-bold tracking-[2px] uppercase text-left",
                 "bg-transparent border border-transparent cursor-pointer",
                 "transition-all duration-200",
                 isDark
-                  ? "text-white/85 hover:bg-white/[0.10] hover:border-white/[0.18] hover:text-white"
-                  : "text-indigo-900/85 hover:bg-white/[0.40] hover:border-white/[0.40] hover:text-indigo-900",
+                  ? "text-white/85 hover:bg-white/10 hover:border-white/18 hover:text-white"
+                  : "text-indigo-900/85 hover:bg-white/40 hover:border-white/40 hover:text-indigo-900",
               ].join(" ")}
             >
               <span className={dot} />
