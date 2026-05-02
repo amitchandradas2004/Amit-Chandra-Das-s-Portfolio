@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Navbar from "./components/Navbar";
+import Navbarnew from "./components/Navbarnew";
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import About from "./components/About";
@@ -94,7 +94,7 @@ export default function App() {
       <div className="orb orb-3" />
 
       {/* Page sections */}
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Navbarnew theme={theme} toggleTheme={toggleTheme}></Navbarnew>
       <Hero />
       <Marquee />
       <About />

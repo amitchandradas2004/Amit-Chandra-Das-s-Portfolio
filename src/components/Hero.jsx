@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AmitIcon from "../Assets/amit.png";
+import AmitImage from "../Assets/amit.png";
 
 const roles = [
   "Full-Stack Developer",
@@ -88,7 +88,7 @@ export default function Hero() {
               Open to opportunities
             </div>
             <div className="profile-avatar">
-              <img src={AmitIcon} alt="Image of Amit Chandra Das" />
+              <img src={AmitImage} alt="Image of Amit Chandra Das" />
             </div>
             <div className="text-2xl font-bold mb-1">Amit Chandra Das</div>
             <div className="profile-handle">// fresher full-stack dev</div>
