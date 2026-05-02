@@ -74,7 +74,7 @@ export default function Hero() {
 }`}
       </style>
       <section style={{ position: "relative" }}>
-        <div className="hero">
+        <div className="hero flex-col md:flex-row">
           {/* LEFT */}
           <div className="flex-1 w-full flex flex-col items-center text-center md:items-start md:text-left">
             {/* hero-tag */}
@@ -94,7 +94,7 @@ export default function Hero() {
             <h1
               className="
                 text-[clamp(2.2rem,6vw,5rem)]
-                font-extrabold leading-[1.05] tracking-[-1px]
+                font-extrabold leading-[1.05] py-2 tracking-[-1px]
                 mb-1 fade-up d2
               "
             >
@@ -107,7 +107,7 @@ export default function Hero() {
               className="
                 font-mono text-[0.85rem]
                 text-[var(--muted)] tracking-[2px]
-                mt-5 mb-7
+                my-7
                 fade-up d3
               "
             >
@@ -165,7 +165,7 @@ export default function Hero() {
               fade-up d3
             "
           >
-            <div className="glass-card profile-card">
+            <div className="glass-card profile-card rounded-xl overflow-hidden">
               <div className="status">
                 <span className="dot" />
                 Open to opportunities

@@ -54,14 +54,17 @@ export default function Projects() {
   return (
     <section id="projects" style={{ position: "relative", zIndex: 1 }}>
       <div className="section-wrapper">
-        <div className="section-label">// what I've built</div>
-        <h2 className="section-title">
+        <div className="section-label flex justify-center md:justify-start">// what I've built</div>
+        <h2 className="section-title text-center md:text-start">
           My <span className="grad-text-green">Projects</span>
         </h2>
 
         <div className="projects-grid">
           {projects.map((p, i) => (
-            <div className="glass-card project-card" key={i}>
+            <div
+              className="glass-card project-card rounded-xl shadow-2xl"
+              key={i}
+            >
               <div className="project-num">{p.num}</div>
               <div className="project-tag">{p.tag}</div>
               <div className="project-title">{p.title}</div>

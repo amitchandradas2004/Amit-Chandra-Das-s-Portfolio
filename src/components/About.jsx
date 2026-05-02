@@ -24,8 +24,10 @@ export default function About() {
       }}
     >
       <div className="section-wrapper">
-        <div className="section-label">// who am I</div>
-        <h2 className="section-title">
+        <div className="section-label flex justify-center md:justify-start">
+          // who am I
+        </div>
+        <h2 className="section-title text-center md:text-start">
           About <span className="grad-text">Me</span>
         </h2>
 
@@ -58,14 +60,7 @@ export default function About() {
               </p>
             </div>
 
-            <div
-              style={{
-                marginTop: "2rem",
-                display: "flex",
-                gap: "1rem",
-                flexWrap: "wrap",
-              }}
-            >
+            <div className="my-10 flex flex-wrap gap-5 justify-center md:justify-start">
               <a href="#contact" className="btn-primary">
                 Hire Me
               </a>
@@ -77,7 +72,10 @@ export default function About() {
 
           <div className="about-highlights">
             {highlights.map((h, i) => (
-              <div className="highlight-row" key={i}>
+              <div
+                className="highlight-row rounded-xl overflow-hidden border border-gray-800"
+                key={i}
+              >
                 <span className="h-icon">{h.icon}</span>
                 <div>
                   <div className="h-label">{h.label}</div>

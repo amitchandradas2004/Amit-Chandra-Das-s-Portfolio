@@ -73,8 +73,10 @@ export default function Contact() {
   return (
     <section id="contact" style={{ position: "relative", zIndex: 1 }}>
       <div className="section-wrapper">
-        <div className="section-label">// lets connect</div>
-        <h2 className="section-title">
+        <div className="section-label flex justify-center md:justify-start">
+          // lets connect
+        </div>
+        <h2 className="section-title text-center md:text-start">
           Get In <span className="grad-text">Touch</span>
         </h2>
 
@@ -118,14 +120,16 @@ export default function Contact() {
               />
             </div>
 
-            <button
-              type="submit"
-              className="btn-primary"
-              style={{ alignSelf: "flex-start" }}
-              disabled={status === "sending"}
-            >
-              {buttonLabel}
-            </button>
+            <div className="flex justify-center md:justify-start">
+              <button
+                type="submit"
+                className="btn-primary"
+                style={{ alignSelf: "flex-start" }}
+                disabled={status === "sending"}
+              >
+                {buttonLabel}
+              </button>
+            </div>
           </form>
 
           <div>
@@ -137,7 +141,7 @@ export default function Contact() {
                 marginBottom: "1.5rem",
               }}
             >
-              I am always happy to chat — whether it is about a potential job, a
+              I am always happy to chat — whether it is about a potential job,
               project idea, a collab, or just saying hello. My inbox is open!
             </p>
 
