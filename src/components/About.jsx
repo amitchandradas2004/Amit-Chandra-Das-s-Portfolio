@@ -14,6 +14,28 @@ const highlights = [
 ];
 
 export default function About() {
+  <style>
+    {`
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+.d1 {
+  animation-delay: 0.1s;
+}
+.d2 {
+  animation-delay: 0.25s;
+}
+.d3 {
+  animation-delay: 0.4s;
+}
+.d4 {
+  animation-delay: 0.55s;
+}
+.d5 {
+  animation-delay: 0.7s;
+}`}
+  </style>;
   return (
     <section
       id="about"
@@ -23,7 +45,7 @@ export default function About() {
         background: "rgba(11,15,26,0.5)",
       }}
     >
-      <div className="section-wrapper">
+      <div className="section-wrapper fade-up d3">
         <div className="section-label flex justify-center md:justify-start">
           // who am I
         </div>
@@ -33,7 +55,7 @@ export default function About() {
 
         <div className="about-grid">
           <div>
-            <div className="about-text">
+            <div className="about-text fade-up d1">
               <p>
                 Hi! I'm <strong>Amit Chandra Das</strong>, a passionate
                 self-taught web developer from Bangladesh. I fell in love with
@@ -70,10 +92,10 @@ export default function About() {
             </div>
           </div>
 
-          <div className="about-highlights">
+          <div className="about-highlights fade-up d3 ">
             {highlights.map((h, i) => (
               <div
-                className="highlight-row rounded-xl overflow-hidden border border-gray-800"
+                className="highlight-row rounded-xl profile-card-1 border-gray-600 border"
                 key={i}
               >
                 <span className="h-icon">{h.icon}</span>

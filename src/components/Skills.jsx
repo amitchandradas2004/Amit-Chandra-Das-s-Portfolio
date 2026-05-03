@@ -60,7 +60,7 @@ const learningNow = ["TypeScript", "Express.js", "REST APIs", "Next.js"];
 export default function Skills() {
   return (
     <section id="skills" style={{ position: "relative", zIndex: 1 }}>
-      <div className="section-wrapper">
+      <div className="section-wrapper fade-up d3">
         <div className="section-label flex justify-center md:justify-start">
           // what I work with
         </div>
@@ -71,7 +71,7 @@ export default function Skills() {
         <div className="skills-grid">
           {skills.map((s, i) => (
             <div
-              className="skill-item border border-gray-800 rounded-xl select-none"
+              className="skill-item border border-gray-800 rounded-xl select-none profile-card-1"
               key={i}
             >
               <div className="skill-icon flex justify-center">

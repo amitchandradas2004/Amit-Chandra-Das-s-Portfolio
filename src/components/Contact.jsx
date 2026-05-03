@@ -72,7 +72,7 @@ export default function Contact() {
 
   return (
     <section id="contact" style={{ position: "relative", zIndex: 1 }}>
-      <div className="section-wrapper">
+      <div className="section-wrapper  fade-up d4">
         <div className="section-label flex justify-center md:justify-start">
           // lets connect
         </div>
@@ -145,12 +145,12 @@ export default function Contact() {
               project idea, a collab, or just saying hello. My inbox is open!
             </p>
 
-            <div className="social-links">
+            <div className="social-links" >
               {socials.map((s, i) => (
                 <a
                   key={i}
                   href={s.href}
-                  className="social-link"
+                  className="social-link profile-card-1"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

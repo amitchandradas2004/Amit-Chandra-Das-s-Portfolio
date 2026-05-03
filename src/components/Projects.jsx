@@ -53,13 +53,13 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" style={{ position: "relative", zIndex: 1 }}>
-      <div className="section-wrapper">
+      <div className="section-wrapper  fade-up d3">
         <div className="section-label flex justify-center md:justify-start">// what I've built</div>
         <h2 className="section-title text-center md:text-start">
           My <span className="grad-text-green">Projects</span>
         </h2>
 
-        <div className="projects-grid">
+        <div className="projects-grid profile-card-1">
           {projects.map((p, i) => (
             <div
               className="glass-card project-card rounded-xl shadow-2xl"

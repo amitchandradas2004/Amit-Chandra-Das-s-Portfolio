@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <div className="cta-band">
+      <div className="cta-band  fade-up d4">
         <div
           style={{
             fontFamily: "var(--font-mono)",
@@ -30,7 +30,7 @@ export default function Footer() {
         </a>
       </div>
 
-      <footer>
+      <footer className="fade-up d5 bg-gray-900">
         <a href="#">
           {" "}
           <div className="footer-logo">&lt;AMIT_CHANDRA_DAS /&gt;</div>
