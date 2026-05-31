@@ -1,6 +1,5 @@
 import { Button } from "@heroui/react";
-import React from "react";
-
+ 
 const highlights = [
   {
     icon: "🎓",
@@ -94,7 +93,7 @@ export default function About() {
               </Button>
               <Button variant="primary">
                 <a
-                  href="/resume.pdf"
+                  href="/Amit-Resume.pdf"
                   className="btn-outline rounded-full w-30 text-black"
                   download
                 >
