@@ -1,16 +1,14 @@
-import React from "react";
-
 const projects = [
   {
     num: "01",
-    tag: "// frontend . ui",
-    title: "Keep Keeper",
-    desc: "Keep Keeper is a simple and intuitive frontend application designed to manage and track your friend list. It helps you monitor your total friends and keep a record of your interactions with them. ",
-    stack: ["React.js", "Node.js", "Tailwind CSS", "DaisyUI"],
-    github: "https://github.com/amitchandradas2004/Keep-Keeper",
-    live: "https://keen-keeper-ebon.vercel.app/",
-    image:
-      "https://i.ibb.co.com/7tTF6Vh9/Gemini-Generated-Image-5ky6mo5ky6mo5ky6.png",
+    tag: "// frontend",
+    title: "SportNest-Sports-Facility-Booking-Management-System",
+    desc: "SportNest is a full-stack sports community platform built with Next.js, MongoDB, and modern web technologies. It enables users to explore sports content, manage profiles, discover events, and connect with other sports enthusiasts. The platform features secure authentication, responsive design, real-time interactions, and a seamless user experience.",
+    stack: ["NextJS", "NodeJS", "ExpressJS", "Framer-Motion", "Tailwind CSS"],
+    github:
+      "https://github.com/amitchandradas2004/SportNest-Sports-Facility-Booking-Management-System",
+    live: "https://sportnest-black.vercel.app",
+    image: "https://ibb.co/bqz1MbQ",
   },
   {
     num: "02",
@@ -37,15 +35,14 @@ const projects = [
   },
   {
     num: "04",
-    tag: "// frontend . landing page",
-    title: "Teamollo - Creative Design Agency Landing Page",
-    desc: "Teamollo – Creative Design Agency Landing Page is a modern frontend layout crafted to showcase a design agency’s services and portfolio. It features a clean, visually engaging interface with well-structured sections for branding, projects, and client engagement. Designed for impact, it delivers a smooth and professional user experience.",
-    stack: ["Tailwind CSS", "HTML5", "CSS3", "Daisy UI"],
-    github:
-      "https://github.com/amitchandradas2004/Teamollo-Responsive-Web-Application",
-    live: "https://amitchandradas2004.github.io/Teamollo-Responsive-Web-Application/",
+    tag: "// frontend . ui",
+    title: "Keep Keeper",
+    desc: "Keep Keeper is a simple and intuitive frontend application designed to manage and track your friend list. It helps you monitor your total friends and keep a record of your interactions with them. ",
+    stack: ["React.js", "Node.js", "Tailwind CSS", "DaisyUI"],
+    github: "https://github.com/amitchandradas2004/Keep-Keeper",
+    live: "https://keen-keeper-ebon.vercel.app/",
     image:
-      "https://i.ibb.co.com/v4ksz1Sd/Gemini-Generated-Image-eu7wqieu7wqieu7w.png",
+      "https://i.ibb.co.com/7tTF6Vh9/Gemini-Generated-Image-5ky6mo5ky6mo5ky6.png",
   },
   {
     num: "05",
