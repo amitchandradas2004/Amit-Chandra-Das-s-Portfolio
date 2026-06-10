@@ -1,5 +1,5 @@
 import { Button } from "@heroui/react";
- 
+
 const highlights = [
   {
     icon: "🎓",
