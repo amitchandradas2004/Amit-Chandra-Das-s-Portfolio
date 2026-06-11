@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import AmitImage from "../Assets/amit.png";
+import { motion } from "framer-motion";
+import AmitImage from "../Assets/Amit.jpg";
 import { Button } from "@heroui/react";
 
 const roles = [
@@ -8,6 +9,29 @@ const roles = [
   "Frontend Developer",
   "Backend Developer",
 ];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
 
 export default function Hero() {
   const [typed, setTyped] = useState("");
@@ -35,187 +59,235 @@ export default function Hero() {
     }
 
     setTyped(word.slice(0, charIdx));
+
     return () => clearTimeout(timeout);
   }, [charIdx, deleting, roleIdx]);
 
   return (
-    <>
-      <style>
-        {`/* ---- HERO ---- */
-    .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 6rem 1rem 1rem;
-  gap: 3rem;
-  position: relative;
-  z-index: 1;
-  // max-width: 1200px;
-  margin: 0 auto;
-}
-  .fade-up {
-  opacity: 0;
-  animation: fadeUp 0.7s ease forwards;
-}
-.d1 {
-  animation-delay: 0.1s;
-}
-.d2 {
-  animation-delay: 0.25s;
-}
-.d3 {
-  animation-delay: 0.4s;
-}
-.d4 {
-  animation-delay: 0.55s;
-}
-.d5 {
-  animation-delay: 0.7s;
-}
-}`}
-      </style>
-      <section style={{ position: "relative" }}>
-        <div className="hero flex-col md:flex-row container mx-auto">
-          {/* LEFT */}
-          <div className="flex-1 flex flex-col items-center text-center md:items-start md:text-left">
-            {/* hero-tag */}
-            <div
-              className="
-                hero-tag
-                inline-flex items-center gap-2
-                font-mono text-[0.68rem] tracking-[3px]
-                text-[var(--green)] uppercase
-                mb-6 fade-up d1
-              "
-            >
-              🚀 Available for internships &amp; opportunities
-            </div>
+    //   <section
+    //     className="
+    //   container
+    //   mx-auto
+    //   py-20
+    //   px-5
+    //   justify-center
+    // "
+    //   >
+    /* Background Glow */
+    /* <motion.div
+        className="absolute inset-0 -z-10"
+        animate={{
+          rotate: [0, 360],
+        }}
+        transition={{
+          duration: 60,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+        <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 blur-3xl rounded-full" />
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-500/10 blur-3xl rounded-full" />
+      </motion.div> */
 
-            {/* hero-name */}
-            <h1
-              className="
-                text-[clamp(2.2rem,6vw,5rem)]
-                font-extrabold leading-[1.05] py-2 tracking-[-1px]
-                mb-1 fade-up d2
-              "
-            >
-              <div style={{ color: "var(--text)" }}>Hey, I'm</div>
-              <div className="grad-text">Amit Chandra Das.</div>
-            </h1>
+    <div className="mx-auto flex flex-col-reverse md:flex-row justify-center py-20 gap-5 px-5 md:px-0">
+      {/* LEFT */}
+      <motion.div
+        className="text-center md:text-start left-div"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* Badge */}
+        <motion.div
+          variants={itemVariants}
+          className="
+          
+  inline-flex
+  items-center
+  justify-center
+  gap-2
+  text-black
+  w-85
+  rounded-full
+  border
+  border-cyan-500/30
+  mb-6
+  bg-cyan-100
+"
+        >
+          🚀 Available for internships & opportunities
+        </motion.div>
 
-            {/* hero-role */}
-            <p
-              className="
-                font-mono text-[0.85rem]
-                text-[var(--muted)] tracking-[2px]
-                my-7
-                fade-up d3
-              "
-            >
-              I'm a&nbsp;
-              <span className="text-[var(--cyan)]">{typed}</span>
-              <span
-                style={{
-                  display: "inline-block",
-                  width: "2px",
-                  height: "0.9em",
-                  background: "var(--cyan)",
-                  marginLeft: "2px",
-                  verticalAlign: "text-bottom",
-                  animation: "blink 1s step-end infinite",
-                }}
-              />
-            </p>
+        {/* Name */}
+        <motion.h1
+          variants={itemVariants}
+          className="
+              text-[clamp(2.2rem,6vw,5rem)]
+              font-extrabold
+              leading-[1.05]
+           left-div-h1
 
-            {/* hero-desc */}
-            <p
-              className="
-                text-[0.95rem] text-[var(--muted)] leading-[1.85]
-                max-w-[460px] mx-auto md:mx-0
-                mb-9 fade-up d4
-              "
-            >
-              A passionate fresher developer who loves building clean,
-              functional, and user-friendly web experiences. I enjoy turning
-              ideas into real products using modern web technologies.
-            </p>
+            "
+        >
+          <div>Hey, I'm</div>
+          <div className="grad-text">Amit Chandra Das.</div>
+        </motion.h1>
 
-            {/* hero-btns */}
-            <div
-              className="
-                flex gap-4 flex-wrap
-                justify-center md:justify-start
-                fade-up d5
-              "
-            >
-              <Button variant="primary">
-                <a
-                  href="#projects"
-                  className="btn-primary rounded-full w-35 text-black"
-                >
-                  View My Work
-                </a>
-              </Button>
-              <Button>
-                <a
-                  href="#contact"
-                  className="btn-outline rounded-full w-30 text-black"
-                >
-                  Let's Talk
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          {/* RIGHT */}
-          <div className="w-full md:w-80 lg:w-80 md:flex-none fade-up d3">
-            <div className="glass-card profile-card rounded-xl overflow-hidden">
-              <div className="status">
-                <span className="dot" />
-                Open to opportunities
-              </div>
-              <div className="profile-avatar">
-                <img src={AmitImage} alt="Image of Amit Chandra Das" />
-              </div>
-              <div className="text-2xl font-bold mb-1">Amit Chandra Das</div>
-              <div className="profile-handle">// fresher full-stack dev</div>
-
-              <div className="stat-row">
-                <div className="stat-cell">
-                  <div className="stat-num grad-text">5+</div>
-                  <div className="stat-label">Projects</div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2">
-                <span className="stack-tag">Next.js</span>
-                <span className="stack-tag">React.js</span>
-                <span className="stack-tag">MongoDB</span>
-                <span className="stack-tag">Tailwind CSS</span>
-                <span className="stack-tag">JavaScript</span>
-                <span className="stack-tag">Daisy UI</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* .scroll-hint */}
-        <div className="absolute bottom-10 left-16 flex flex-col items-center gap-1.5">
-          <div
-            className="w-px h-11"
+        {/* Role */}
+        <motion.p
+          variants={itemVariants}
+          className="
+              font-mono
+              text-[0.9rem]
+              tracking-[2px]
+              my-7
+            "
+        >
+          I'm a <span className="text-cyan-400 font-semibold">{typed}</span>
+          <span
             style={{
-              background:
-                "linear-gradient(to bottom, var(--cyan), transparent)",
-              animation: "pulse 2.2s ease-in-out infinite",
+              display: "inline-block",
+              width: "2px",
+              height: "0.9em",
+              background: "var(--cyan)",
+              marginLeft: "2px",
+              verticalAlign: "text-bottom",
+              animation: "blink 1s step-end infinite",
             }}
           />
+        </motion.p>
 
-          {/* .scroll-text */}
-          <span className="font-mono text-[0.55rem] tracking-[3px] text-[var(--muted)] uppercase">
-            Scroll
-          </span>
-        </div>
-      </section>
-    </>
+        {/* Description */}
+        <motion.p
+          variants={itemVariants}
+          className="
+              text-[1rem]
+              leading-[1.9]
+           md:text-start
+              mb-9
+              mx-auto
+              md:mx-0
+              text-gray-400 text-center
+            "
+        >
+          A passionate fresher developer who loves building clean, functional,
+          and user-friendly web experiences.
+          <br /> I enjoy turning ideas into real products using modern web
+          technologies.
+        </motion.p>
+
+        {/* Buttons */}
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-wrap gap-4 justify-center md:justify-start"
+        >
+          <Button color="primary" className={"w-30"}>
+            <a href="#projects">View My Work</a>
+          </Button>
+
+          <Button variant="primary" className={"w-30"}>
+            <a href="#contact">Let's Talk</a>
+          </Button>
+        </motion.div>
+      </motion.div>
+
+      {/* RIGHT */}
+      <motion.div
+        className="w-full md:w-80 lg:w-90"
+        initial={{ opacity: 0, x: 80 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <motion.div
+          className="glass-card profile-card rounded-xl overflow-hidden"
+          whileHover={{
+            y: -10,
+            transition: { duration: 0.3 },
+          }}
+        >
+          <div className="status">
+            <span className="dot" />
+            Open to opportunities
+          </div>
+
+          <div className="profile-avatar">
+            <motion.img
+              src={AmitImage}
+              alt="Image of Amit Chandra Das"
+              className="rounded-full select-none"
+            />
+          </div>
+
+          <div className="text-2xl font-bold mb-1">Amit Chandra Das</div>
+
+          <div className="profile-handle">// Full-Stack Developer</div>
+
+          <div className="stat-row">
+            <div className="stat-cell">
+              <div className="stat-num grad-text">5+</div>
+              <div className="stat-label">Projects</div>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Next.js",
+              "React.js",
+              "MongoDB",
+              "JavaScript",
+              "Tailwind CSS",
+              "Node.js",
+              "Express.js",
+              "Framer Motion",
+            ].map((tech, index) => (
+              <motion.span
+                key={tech}
+                className="stack-tag"
+                initial={{
+                  opacity: 0,
+                  scale: 0.8,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+                transition={{
+                  delay: index * 0.08,
+                }}
+                whileHover={{
+                  y: -4,
+                  scale: 1.05,
+                }}
+              >
+                {tech}
+              </motion.span>
+            ))}
+          </div>
+        </motion.div>
+      </motion.div>
+    </div>
+
+    /* Scroll Indicator * 
+      /* <div className="absolute bottom-10 left-16 flex flex-col items-center gap-1.5">
+        <motion.div
+          className="w-px h-11"
+          animate={{
+            scaleY: [1, 1.4, 1],
+            opacity: [1, 0.5, 1],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+          }}
+          style={{
+            background: "linear-gradient(to bottom, var(--cyan), transparent)",
+          }}
+        />
+
+        <span className="font-mono text-[0.55rem] tracking-[3px] uppercase">
+          Scroll
+        </span>
+      </div> */
+    // </section>
   );
 }

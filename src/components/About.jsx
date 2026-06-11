@@ -42,7 +42,6 @@ export default function About() {
       style={{
         position: "relative",
         zIndex: 1,
-        background: "rgba(11,15,26,0.5)",
       }}
     >
       <div className="section-wrapper fade-up d3">
@@ -93,7 +92,7 @@ export default function About() {
               </Button>
               <Button variant="primary">
                 <a
-                  href="/Amit-Resume.pdf"
+                  href="/Resume-of-Amit.pdf"
                   className="btn-outline rounded-full w-30 text-black"
                   download
                 >

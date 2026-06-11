@@ -317,6 +317,9 @@ body {
 .profile-card {
   position: relative;
   padding: 1.8rem;
+  margin-top: 80px;
+  margin-right: 10px;
+  margin-left: 10px;
   animation: float 5s ease-in-out infinite;
 }
 .profile-card::before {
@@ -332,6 +335,14 @@ body {
   /* position: relative; */
   /* padding: 1.8rem; */
   animation: float 5s ease-in-out infinite;
+}
+.left-div {
+  padding-top: 90px;
+  padding-left: 10px;
+}
+.left-div-h1{
+padding-top: 30px;
+padding-bottom: 30px;
 }
 .profile-avatar {
   width: 160px;

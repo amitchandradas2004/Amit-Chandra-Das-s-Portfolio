@@ -1,4 +1,3 @@
-import { Button } from "@heroui/react";
 import { useState, useEffect, useRef } from "react";
 
 const navLinks = [
@@ -75,7 +74,7 @@ export default function Navbar({ theme, toggleTheme }) {
           "w-[calc(100%-1.5rem)] sm:w-[calc(100%-2.5rem)] max-w-5xl",
           "flex items-center justify-around gap-5",
           "min-h-11 sm:min-h-13",
-          "rounded-full px-2 sm:px-3",
+          "rounded-full px-2 sm:px-3 mb-20",
           pillBase,
         ].join(" ")}
         style={{

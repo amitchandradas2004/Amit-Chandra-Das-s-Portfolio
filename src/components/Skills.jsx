@@ -36,6 +36,11 @@ const skills = [
     link: "https://daisyui.com/docs/install/",
   },
   {
+    name: "Framer Motion",
+    icon: "https://motion.dev/favicon.svg",
+    link: "https://motion.dev",
+  },
+  {
     name: "Hero UI",
     icon: "https://heroui.com/icons/favicon.svg",
     link: "https://heroui.com/",
@@ -48,7 +53,6 @@ const skills = [
   },
   {
     name: "React.js",
-    // icon: "https://react.dev/favicon-32x32.png",
     icon: "https://cdn-icons-png.flaticon.com/128/3459/3459528.png",
     link: "https://react.dev/",
   },
@@ -67,20 +71,20 @@ const skills = [
     icon: "https://img.icons8.com/?size=96&id=54087&format=png",
     link: "https://nodejs.org/en",
   },
-  // {
-  //   name: "Express.js",
-  //   icon: "https://img.icons8.com/?size=96&id=PZQVBAxaueDJ&format=png",
-  //   link: "https://expressjs.com/",
-  // },
+  {
+    name: "Express.js",
+    icon: "https://img.icons8.com/?size=96&id=PZQVBAxaueDJ&format=png",
+    link: "https://expressjs.com/",
+  },
+  {
+    name: "JWT Auth",
+    icon: "https://img.icons8.com/?size=96&id=rHpveptSuwDz&format=png",
+    link: "https://jwt-auth.readthedocs.io/en/develop/",
+  },
   // {
   //   name: "PostgreSQL",
   //   icon: "https://cdn-icons-png.flaticon.com/128/5968/5968342.png",
   //   link: "https://www.postgresql.org/",
-  // },
-  // {
-  //   name: "JWT Auth",
-  //   icon: "https://img.icons8.com/?size=96&id=rHpveptSuwDz&format=png",
-  //   link: "https://jwt-auth.readthedocs.io/en/develop/",
   // },
 ];
 
