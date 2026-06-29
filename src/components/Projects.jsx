@@ -1,6 +1,59 @@
+// export Image from "/src/Assets/Startupforge.png";
+
 const projects = [
   {
     num: "01",
+    tag: "// Full-Stack - FrontEnd",
+    title: "Startup Forge – Collaborative Startup Ecosystem Platform",
+    desc: "A modern full-stack platform that connects founders with talented collaborators, enabling users to create startups, post opportunities, recruit team members, and build innovative ventures through a seamless, secure, and collaborative ecosystem.",
+    stack: [
+      "Next.js 15",
+      "React.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Better Auth",
+      "JWT",
+      "Stripe",
+      "Git",
+      "GitHub",
+      "Vercel",
+      "VS Code",
+    ],
+    github:
+      "https://github.com/amitchandradas2004/StartupForge-Startup-Team-Builder-Platform-ClientSide",
+    live: "https://startupforge-client-swart.vercel.app",
+    image: "/src/Assets/Startupforge.png",
+  },
+  {
+    num: "02",
+    tag: "//  Full-Stack - FrontEnd",
+    title: "HireLoop – Modern AI-Powered Job Marketplace",
+    desc: "HireLoop is a full-stack job portal that connects job seekers with recruiters through a modern, subscription-based hiring platform. It enables seamless job discovery, secure recruitment, AI-powered matching, application tracking, and premium hiring features with a fast, responsive user experience.",
+    stack: [
+      "Next.js 15",
+      "React.js",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Better Auth",
+      "JWT",
+      "Stripe",
+      "Git",
+      "GitHub",
+      "Vercel",
+      "VS Code",
+    ],
+    github: "https://github.com/amitchandradas2004/Hireloop-Client",
+    live: "https://hireloop-client-one.vercel.app",
+    image: "/src/Assets/Hireloop.png",
+  },
+  {
+    num: "03",
     tag: "// frontend",
     title: "SportNest-Sports-Facility-Booking-Management-System",
     desc: "SportNest is a full-stack sports community platform built with Next.js, MongoDB, and modern web technologies. It enables users to explore sports content, manage profiles, discover events, and connect with other sports enthusiasts. The platform features secure authentication, responsive design, real-time interactions, and a seamless user experience.",
@@ -8,21 +61,10 @@ const projects = [
     github:
       "https://github.com/amitchandradas2004/SportNest-Sports-Facility-Booking-Management-System",
     live: "https://sportnest-black.vercel.app",
-    image: "https://ibb.co/bqz1MbQ",
+    image: "/src/Assets/Sportnest.png",
   },
   {
-    num: "02",
-    tag: "// frontend · ui",
-    title: "AI Model Hub",
-    desc: "AI Model Hub is a frontend platform for exploring a curated collection of AI models and tools. It allows users to browse features, compare options, and view subscription plans in a clean, organized interface.",
-    stack: ["React.js", "JavaScript", "Tailwind CSS", "DaisyUI"],
-    github: "https://github.com/amitchandradas2004/AI-Model-Hub-By-React",
-    live: "https://ai-model-hub-by-react.vercel.app/",
-    image:
-      "https://i.ibb.co.com/tPP2j1Nr/Gemini-Generated-Image-ozjcwqozjcwqozjc.png",
-  },
-  {
-    num: "03",
+    num: "04",
     tag: "// frontend . ui",
     title: "English Janala - Vocabulary Explorer",
     desc: "English Janala - Vocabulary Explorer is a frontend application for discovering English words with clear definitions and Bangla meanings. It provides a simple, structured interface to help users quickly understand and expand their vocabulary.",
@@ -34,7 +76,7 @@ const projects = [
       "https://i.ibb.co.com/4hG0v4G/Gemini-Generated-Image-dhxvpudhxvpudhxv.png",
   },
   {
-    num: "04",
+    num: "05",
     tag: "// frontend . ui",
     title: "Keep Keeper",
     desc: "Keep Keeper is a simple and intuitive frontend application designed to manage and track your friend list. It helps you monitor your total friends and keep a record of your interactions with them. ",
@@ -43,17 +85,6 @@ const projects = [
     live: "https://keen-keeper-ebon.vercel.app/",
     image:
       "https://i.ibb.co.com/7tTF6Vh9/Gemini-Generated-Image-5ky6mo5ky6mo5ky6.png",
-  },
-  {
-    num: "05",
-    tag: "// css · responsive",
-    title: "Portfolio Website",
-    desc: "This very portfolio! Built with React.js, featuring dark glassmorphism design, neon aesthetics, smooth animations, and fully responsive layout.",
-    stack: ["React.js", "CSS3", "Tailwind CSS", "DaisyUI"],
-    github: "https://github.com/amitchandradas2004/Portfolio-Website",
-    live: "https://amitchandradasportfolio.vercel.app/",
-    image:
-      "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?q=80&w=873&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
