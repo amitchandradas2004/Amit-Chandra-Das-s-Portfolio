@@ -92,7 +92,7 @@ export default function About() {
               </Button>
               <Button variant="primary">
                 <a
-                  href="/Resume-of-Amit.pdf"
+                  href="/Amit's-Resume-Full-Stack.pdf"
                   className="btn-outline rounded-full w-30 text-black"
                   download
                 >
