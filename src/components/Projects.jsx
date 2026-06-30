@@ -25,7 +25,7 @@ const projects = [
     github:
       "https://github.com/amitchandradas2004/StartupForge-Startup-Team-Builder-Platform-ClientSide",
     live: "https://startupforge-client-swart.vercel.app",
-    image: "/src/Assets/Startupforge.png",
+    image: "https://i.ibb.co.com/3mQzVfx7/Sportnest.png",
   },
   {
     num: "02",
@@ -50,7 +50,7 @@ const projects = [
     ],
     github: "https://github.com/amitchandradas2004/Hireloop-Client",
     live: "https://hireloop-client-one.vercel.app",
-    image: "/src/Assets/Hireloop.png",
+    image: "https://i.ibb.co.com/BKPbb297/Hireloop.png",
   },
   {
     num: "03",
@@ -61,7 +61,7 @@ const projects = [
     github:
       "https://github.com/amitchandradas2004/SportNest-Sports-Facility-Booking-Management-System",
     live: "https://sportnest-black.vercel.app",
-    image: "/src/Assets/Sportnest.png",
+    image: "https://i.ibb.co.com/KxSwBNtX/Sportnest.png",
   },
   {
     num: "04",
